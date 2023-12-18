@@ -18,6 +18,7 @@ or
 git clone https://github.com/boston-dynamics/spot-sdk.git
 
 Install virtualenv:
+cmd in working directory
 py.exe -3.6 -m pip install virtualenv
 
 Create virtualenv "my_spot_env":
