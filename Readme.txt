@@ -11,11 +11,9 @@ py.exe -3.6 --version
 Check pip version:
 py.exe -3.6 -m pip --version
 
-Please ensure the spot-sdk is downloaded/cloned/updated:
-git bash in working directory 
+Please ensure the spot-sdk is updated:
+git bash in working directory
 git submodule update --init --recursive
-or
-git clone https://github.com/boston-dynamics/spot-sdk.git
 
 Install virtualenv:
 cmd in working directory
@@ -30,7 +28,7 @@ call "my_spot_env\Scripts\activate.bat"
 Deactivate virtualenv:
 call "my_spot_env\Scripts\deactivate.bat"
 
------ Install dependencies -----
+----- Install dependencies on virtual env -----
 
 Set-up:
 Activate virtualenv
@@ -51,12 +49,14 @@ bosdyn-mission             3.3.2
 if some packages are missing due to installation issues, try:
 pip install bosdyn-client==3.3.2 bosdyn-mission==3.3.2 bosdyn-choreography-client==3.3.2
 
+note: not all of the pakcages above are strictly needed for this challenge, however it is documented for completeness
+
 ----- Script Clarification -----
 
 authenticate_spot.py --> creates a SDK instance followed by a robot instance and then authenticates the robot instance.
 input arguments are IP-Address of the robot, username and password.
 
-motion_test_spot.py --> configures E-Stop and lease then checks service availability for the given client.
+motion_test_spot.py --> configures E-Stop and lease, then checks service availability for the given client.
                         once complete, power spot on, commands spot to stand.
 input argument is a robot instance.
 
@@ -66,12 +66,11 @@ test_spot.py --> sets the IP-address, username and password for the robot.
 
 ----- Run Test Script -----
 
-cd src
 open test_spot.py in an editor and input robot IP-Address, username and password.
 
-input to terminal:
+in src directory using the virtual env previously configured, input to terminal:
 python test_spot.py
 
-expectation: connect to spot, authenticate sucessfully and then enable motors and stand. 
-(motion commands for yaw, sit and shutdown are commented)
+expectation: connect to spot, authenticate sucessfully, enable motors and stand. 
+(motion commands for yaw, sit and shutdown are currently commented)
 

@@ -13,6 +13,6 @@ password = "password"
 robot = connect_to_spot(address, username, password)
 
 # perform motion control
-# Establishes E-Stop, lease and power on.
-# Makes Spot stand, rotate (yaw) around z axis, sit then power off.
+# Establishes E-Stop, lease and robot power on.
+# Makes Spot stand.
 motion_test_spot(robot)

@@ -1,9 +1,13 @@
 """Access spot robot and make it move"""
 
+''' commented for future use
+
 #import time
 #from bosdyn.geometry import EulerZXY
+from bosdyn.client.robot_command import RobotCommandBuilder
+'''
 import bosdyn.client
-from bosdyn.client.robot_command import RobotCommandClient, blocking_stand #, RobotCommandBuilder
+from bosdyn.client.robot_command import RobotCommandClient, blocking_stand
 
 def motion_test_spot(robot):
     """
@@ -13,7 +17,6 @@ def motion_test_spot(robot):
     Args:
         robot (Robot): The connected Spot robot instance.
     """
-    
     # Configuring Motor Power Authority "E-Stop" for motion control.
     estop_client = robot.ensure_client('estop')
     estop_endpoint = bosdyn.client.estop.EstopEndpoint(client=estop_client, name='my_estop', estop_timeout=9.0)
@@ -35,7 +38,9 @@ def motion_test_spot(robot):
     
     # Command the robot to perform a basic stand
     blocking_stand(command_client, timeout_sec=10)
-'''
+    
+''' commented for future use
+
     # define spot motion command --> rotate clockwise arouned z axis (yaw) with by 0.4 radians ~ 23 degrees
     footprint_R_body = EulerZXY(yaw=0.4, roll=0.0, pitch=0.0)
     

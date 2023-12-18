@@ -2,7 +2,6 @@
 
 from bosdyn.client import create_standard_sdk
 
-
 def connect_to_spot(address, username, password):
     """connect to bosdyn api and authenticate spot robot
 
