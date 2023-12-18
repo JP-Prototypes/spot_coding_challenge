@@ -40,16 +40,17 @@ pip list --format=columns | findstr bosdyn
 
 Expected output:
 bosdyn-api                 3.3.2
-bosdyn-choreography-client 3.3.2
-bosdyn-choreography-protos 3.3.2
 bosdyn-client              3.3.2
 bosdyn-core                3.3.2
-bosdyn-mission             3.3.2
 
-if some packages are missing due to installation issues, try:
+additional packages can be installed if needed:
 pip install bosdyn-client==3.3.2 bosdyn-mission==3.3.2 bosdyn-choreography-client==3.3.2
 
-note: not all of the pakcages above are strictly needed for this challenge, however it is documented for completeness
+bosdyn-choreography-client 3.3.2
+bosdyn-choreography-protos 3.3.2
+bosdyn-mission             3.3.2
+
+note: not all of the packages above are strictly needed for this challenge, however it is documented for completeness.
 
 ----- Script Clarification -----
 
