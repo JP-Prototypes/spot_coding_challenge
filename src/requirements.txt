@@ -1,0 +1,4 @@
+-f ../spot-sdk/prebuilt
+bosdyn-client >= 3.1
+bosdyn-choreography-client >= 3.1
+bosdyn-mission >= 3.1
